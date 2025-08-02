@@ -16,6 +16,3 @@
 
 ### Contributors List
 
-SrNo | Name | Faculty or Student | Department| Institute | Email id
-:--|:--|:--|:--|:--|:--|
-1 | Neel Prajapati  | Student | Mechanical Engineering |REC Banda| neelprajapati7568@gmail.com
