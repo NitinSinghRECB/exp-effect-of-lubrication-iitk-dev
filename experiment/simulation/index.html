@@ -87,18 +87,15 @@
 					<button class="button button1 hidden B" id="moveButton4">Insert The Ball</button>
 					<!-- <button class="button button1 hidden" id="moveButton4" >Move Handle</button> -->
 					<button class="button button1 hidden B" id="moveButton5">Pin on Tribometer</button>
-					<button class="button button1 hidden B" id="moveButton55">Select Lubricant</button>
 
-					<!-- hidden container -->
-					<div id="lubricantContainer" class="hidden">
-						<h3 class="m">Choose Lubricant:</h3>
-						<button class="button button1 B" id="lub1"
-							onclick="selectLubricant(this, 'Lubricant 1')">Lubricant 1 <span
-								class="tick">✔️</span></button>
-						<button class="button button1 B" id="lub2"
-							onclick="selectLubricant(this, 'Lubricant 2')">Lubricant 2 <span
-								class="tick">✔️</span></button>
-					</div>
+
+
+					<button class="button button1 hidden B" id = "lubBtn"onclick="showCircle('black',80,50)">Lubricant 1<span class="tick">✔️</span></button>
+                    <button  class="button button1 hidden B"  id = "lubBtn2" onclick="showCircle('yellow',80,50)">Lubricant 2<span class="tick">✔️</span></button>
+
+
+
+
 					<button class="button button1 hidden  B" id="moveButton6">Input Load (10N)</button>
 					<div id="buttonContainer" class="hidden">
 						<h3 class="m ">Start Rotation for 30 minute:</h3>
@@ -4112,10 +4109,21 @@
        width="512" height="271" xlink:href="../simulation/disc/1-1.png"></image> -->
 
 
-								<image id="objectToMove" class="discImage" class="moveable" x="1600" y="1000"
+
+
+
+	                            
+								<image id="objectToMove"  class="discImage" class="moveable" x="1600" y="1000"
 									id="material 1" data-name="Stainless Steel material " style="overflow:visible;"
 									width="512" height="271" xlink:href="..\simulation\disc\1-1.png"></image>
-
+									<ellipse id="overlayCircle"
+           cx="1250px" cy="779px"  
+           rx="40" ry="40" 
+           fill="black" opacity="0.4" style="display:none;" />
+								
+					
+				
+								
 							</g>
 						</g>
 
@@ -4285,6 +4293,11 @@
 
 
 
+
+
+
+
+
 					<h1 id="out" style="text-align: center; margin-top: -60px; margin-bottom: 10px;"></h1>
 
 				</div>
@@ -4334,7 +4347,7 @@
 					<!-- <div id="calculationContainer" style="display:none; margin-top:20px;"></div> -->
 				</div>
 				<div id="cMessage" class="message-text" style="display:none;
-						margin-left:80px;
+						margin-left:50px;
     position: static;
     bottom: 30px;
 	width:fit-content;

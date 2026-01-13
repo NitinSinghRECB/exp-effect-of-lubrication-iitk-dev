@@ -761,19 +761,12 @@ ul {
 
 
 
- .hidden {
-    display: none;
-  }
-  .tick {
-    margin-left: 5px;
-    opacity: 0; /* hidden by default */
-    transition: opacity 0.2s;
-  }
-  .active .tick {
-    opacity: 1; /* show tick when active */
-  }
-  .active {
-    background-color: #cceeff; /* highlight selected button */
-  }
+
+
+
+
+
+
+  
 
 

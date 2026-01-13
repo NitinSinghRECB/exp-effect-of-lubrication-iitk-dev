@@ -46,7 +46,7 @@ function startImageSlideshow() {
     }, 5000);
 }
 
-
+//fefd
 
 
 
@@ -185,6 +185,7 @@ const moveButton5 = document.getElementById('moveButton5');
     function moveObject5() {
         // Get the position of the target object
         const targetRect = targetObject.getBoundingClientRect();
+        document.getElementById("lubBtn2").classList.remove('hidden');
         // const targetX = targetRect.left;
         // const targetY = targetRect.top;
 
@@ -501,13 +502,6 @@ moveButton6.addEventListener('click', function () {
 
 
 
-const buttonContainer1 = document.getElementById('buttonContainer1');
-
-moveButton55.addEventListener('click', function () {
-    buttonContainer.classList.remove('hidden');
-});
-
-
 
 
 
@@ -661,7 +655,7 @@ function showCalculation() {
 
 function generateTable(data) {
   return `
-    <table style="width:100%; border-collapse:collapse; margin-top:10px;" border="1">
+    <table style="width:100%; border-collapse:collapse;height:70px margin-top:10px;" border="1">
       <tr style="background:#eee;">
         <th>Parameter</th>
         <th>Value</th>
@@ -790,21 +784,21 @@ function markClicked(button) {
 
 
 
+function showCircle(color, rx, ry){
+  const circle = document.getElementById("overlayCircle");
+  // change color
+  document.getElementById("moveButton6").classList.remove("hidden")
+  circle.setAttribute("fill", color);
+  // change radii
+  circle.setAttribute("rx", rx/1.8);
+  circle.setAttribute("ry", ry/1.8);
+  // show it
+  circle.style.display = "block";
+}
 
 
 
 
 
-document.getElementById('moveButton55').addEventListener('click', function () {
-    document.getElementById('lubricantContainer').classList.toggle('hidden');
-  });
 
-  function selectLubricant(button, name) {
-    // remove 'active' from all lubricant buttons in the container
-    document.querySelectorAll('#lubricantContainer button').forEach(btn => {
-      btn.classList.remove('active');
-    });
-    // add 'active' to the clicked button
-    button.classList.add('active');
-    console.log('Selected:', name);
-  }
+
